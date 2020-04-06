@@ -10,20 +10,10 @@ permissions:
           owner: www-data
           group: www-data
 hooks:
-        ApplicationStop:
-              - location: script/appstop.sh
-
-        BeforeInstall:
-              - location: script/preinstall.sh
-
+   
         Install:         
-              - location: script/install.sh
-
-        AfterInstall:
               - location: script/script.sh
 
         ApplicationStart:
-              - location: script/appstart.sh
+              - location: script/apache.sh
 
-        ValidateService:
-              - location: 
