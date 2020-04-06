@@ -12,6 +12,6 @@ phases:
       - composer install --no-progress --no-interaction 
 
   artifacts:
-  files:
-    - '**/*'
-  name: humhub-$(date +%Y-%m-%d)
+    files:
+      - '**/*'
+    name: humhub-$(date +%Y-%m-%d)
