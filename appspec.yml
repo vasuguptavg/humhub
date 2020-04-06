@@ -9,8 +9,7 @@ permissions:
         - object: /var/www/html/humhub
           owner: www-data
           group: www-data
-hooks:
-   
+hooks:  
         Install:         
               - location: script/script.sh
 
