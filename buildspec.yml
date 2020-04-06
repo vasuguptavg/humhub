@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - rm -rf /root/.phpenv
+      - add-apt-repository -y ppa:ondrej/php
+      - apt -qq update -y
+      - apt -qq install -y unzip php7.3-cli php7.3-dev php7.3-mbstring php7.3-dom php7.3-curl php7.3-ldap php7.3-gd php7.3-zip
+      - wget https://getcomposer.org/installer -O - -q | php -- --quiet && mv composer.phar /usr/local/bin/composer
+  build:
+    commands:
+      - composer install --no-progress --no-interaction 
+
+  artifacts:
+  files:
+    - '**/*'
+  name: humhub-$(date +%Y-%m-%d)
