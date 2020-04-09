@@ -18,3 +18,4 @@ More information:
 - [Community](http://community.humhub.com/)
 - [Licence](http://www.humhub.org/licences)
 
+1
